@@ -6,7 +6,10 @@
 
 .jumbotron{
     width: 100%;
-    height: 500px;
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     .jumbotron-child{
         width: 80%;
@@ -62,6 +65,81 @@
                     height: 30px;
                 }
             }
+        }
+
+        .featured-text{
+            padding-top: 60px;
+            width: 22%;
+            color: #fff;
+        
+            h1{
+                font-size: 48px;
+                font-weight: 700;
+                line-height: 56px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: #fff;
+            }
+        
+            .rating{
+                display: flex;
+                justify-content: space-between;
+                width: 50%;
+            }
+        
+            p{
+                padding-top: 15px;
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 18px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+        }
+
+        .featured-button{
+            background-color: red;
+            width: 13%;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #fff;
+            margin-top: 10px;
+            padding: 1px;
+
+
+            .icon{
+                width: 10%;
+                margin-left: -5px;
+            }
+        }
+    }
+}
+
+.featured-movies{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    margin-top: 3%;
+
+    .directory{
+        display: flex;
+
+        h2{
+            font-size: 36px;
+            font-weight: 700;
+            text-align: left;
+            width: 70%;
+        }
+
+        a{
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 400;
+            text-align: right;
+            width: 30%;
+            color: #BE123C;
         }
     }
 }
