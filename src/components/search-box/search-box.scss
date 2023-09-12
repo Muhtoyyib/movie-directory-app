@@ -1,0 +1,34 @@
+.search-box {
+    width: 525px;
+    line-height: 20px;
+    margin: 5px 0 0 260px;
+    background: transparent;
+    height: Hug (36px);
+    padding: 6px 10px 6px 10px;
+    border-radius: 8px;
+    border: 2px solid #0000ff;
+    color: #fff;
+
+}
+
+.search-box :focus{
+    border: 2px solid #fff;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ffffffe3;
+    opacity: 0.8;
+}
+
+.input-box i{
+    position: absolute;
+}
+
+.icon{
+    padding: 10px;
+    color: #fff;
+    min-width: 50px;
+    text-align: center;
+    right: 535px;
+    margin: 5px 0 2px 0;
+}

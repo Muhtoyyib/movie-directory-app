@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.jumbotron{
+    width: 100%;
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .jumbotron-child{
+        width: 80%;
+        height: 100%;
+        margin: auto;
+
+        ul{
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+            list-style-type: none;
+            padding: 15px 0;
+
+            .brand{
+                display: flex;
+                justify-content: flex-start;
+
+                h1{
+                    padding: 13px 0 0 30px;
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 24px;
+                    letter-spacing: 0em;
+                    text-align: left;
+
+                }
+            }
+
+            .sign-in{
+                display: flex;
+                justify-content: flex-end;
+                width: 30%;
+                padding-top: 9px;
+
+                h1{
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 24px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    padding: 5px 15px 0 0;
+
+                }
+
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                }
+
+                img{
+                    margin: 0 0 0 5px;
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+
+        .featured-text{
+            padding-top: 60px;
+            width: 22%;
+            color: #fff;
+        
+            h1{
+                font-size: 48px;
+                font-weight: 700;
+                line-height: 56px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: #fff;
+            }
+        
+            .rating{
+                display: flex;
+                justify-content: space-between;
+                width: 50%;
+            }
+        
+            p{
+                padding-top: 15px;
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 18px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+        }
+
+        .featured-button{
+            background-color: red;
+            width: 13%;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #fff;
+            margin-top: 10px;
+            padding: 1px;
+
+
+            .icon{
+                width: 10%;
+                margin-left: -5px;
+            }
+        }
+    }
+}
+
+.featured-movies{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    margin-top: 3%;
+
+    .directory{
+        display: flex;
+
+        h2{
+            font-size: 36px;
+            font-weight: 700;
+            text-align: left;
+            width: 70%;
+        }
+
+        a{
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 400;
+            text-align: right;
+            width: 30%;
+            color: #BE123C;
+        }
+    }
+}
