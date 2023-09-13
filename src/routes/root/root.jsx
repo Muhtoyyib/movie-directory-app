@@ -6,8 +6,8 @@ import { getMovies } from '../../components/helper';
 import './root.scss';
 import Brand from '../../assets/tv.png';
 import Hamburger from '../../assets/Menu.png';
-import Imdb from '../../assets/IMDB.png';
-import RottenTomato from '../../assets/Rotten Tomatoes.png';
+import Rating from '../../assets/Rating.png';
+import Play from '../../assets/Icon.png'
 import { useLoaderData } from 'react-router-dom';
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -69,8 +69,7 @@ export default function Root() {
           </h1>
 
           <div className='rating'>
-            <img src={Imdb} alt='IMDB' className='imdb' />
-            <img src={RottenTomato} alt='tomato' className='tomato'/>
+            <img src={Rating} alt='IMDB' className='imdb' />
           </div>
 
           <p>
@@ -78,7 +77,7 @@ export default function Root() {
           </p>
         </div>
 
-        <button type='button' className='featured-button'> <i className="fa fa-play icon"></i> Watch Trailer</button>
+        <button type='button' className='featured-button'> <img src={Play} /> Watch Trailer</button>
 
       </div> {/* Jumbotron-child end */}
     </div>  {/* jumbotron */}
