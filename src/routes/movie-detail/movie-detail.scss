@@ -1,5 +1,8 @@
 .movie-detail-container{
     font-family: Poppins;
+    width: 80%;
+    margin: auto;
+    margin-top: 3%;
 }
 
 img{
@@ -43,3 +46,37 @@ img{
     margin-top: 5px;
 
 }
+
+@media (max-width: 768px) {
+    
+    .movie-details{
+        display: flex;
+        width: 60%;
+    
+    
+        .title{
+            font-size: 10px;
+            line-height: 15px;
+        }
+    
+        .release-date{
+            font-size: 10px;
+            line-height: 10px;
+        }
+    }
+    
+    .overwiew{
+        font-size: 10px;
+        line-height: 10px;
+    }
+}
+
+// @media only (min-width: 992px) {
+
+// }
+
+
+// @media only screen and (min-width: 1200px) {
+
+// }
+  

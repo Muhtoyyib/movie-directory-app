@@ -4,14 +4,14 @@
     box-sizing: border-box;
   }
   
-  .jumbotron {
+.jumbotron {
     width: 100%;
     height: 600px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-  
+    
     .jumbotron-child {
       width: 80%;
       height: 100%;
@@ -19,7 +19,6 @@
   
       ul {
         display: flex;
-        justify-content: space-between;
         color: #fff;
         list-style-type: none;
         padding: 15px 0;
@@ -150,23 +149,115 @@
     row-gap: 50px;
   }
   
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .jumbotron {
-      height: 400px; // Adjust height for smaller screens
-    }
+        height: 500px;
+        .jumbotron-child {
+          ul {
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+            list-style-type: none;
+            padding: 15px 0;
+      
+            .brand {
+                
+                img{
+                    width: 50%;
+                    height: 90%;
+                    margin-top: 2px;
+                }
+              h1 {
+                padding: 12px 0 0 10px;
+                font-size: 15px;
+              }
+            }
+      
+            .sign-in {
+      
+              h1 {
+                font-size: 10px;
+                padding: 2px 15px 0 0;
+              }
+    
+      
+              img {
+                margin: 0 0 0 5px;
+                width: 30px;
+                height: 30px;
+              }
+            }
+          }
+      
+          .featured-text {
+            padding-top: 40px;
+      
+            h1 {
+              font-size: 38px;
+              line-height: 46px;
+            }
+      
+            .rating {
+              display: flex;
+              justify-content: space-between;
+              width: 60%;
+              margin-top: 2%;
+
+              .tomato{
+                margin-left: 15px;
+               }
+            }
+
+      
+            p {
+              padding-top: 15px;
+              font-size: 5px;
+              font-weight: 500;
+              line-height: 8px;
+            
+            }
+          }
+      
+          .featured-button {
+            background-color: red;
+            width: 50%;
+            font-size: 10px;
+            .icon {
+              width: 10%;
+              margin-left: -3px;
+            }
+          }
+        }
+      }
+      
+      .featured-movies {
+      
+        .directory {
+          h2 {
+            font-size: 18px;
+          }
+      
+          a {
+            font-size: 17px;
+          }
+        }
+      }
+      
+      .products-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 10px;
+        row-gap: 50px;
+      }
   
-    .jumbotron-child {
-      width: 90%; // Adjust the width for smaller screens
-    }
-  
-    .featured-text {
-      width: 100%; // Make the text full width on smaller screens
-    }
-  
-    .featured-button {
-      width: 30%; // Adjust the button width for smaller screens
-    }
-  
-    // Add more responsive styles as needed
   }
+
+// @media only (min-width: 992px) {
+
+// }
+
+
+// @media only screen and (min-width: 1200px) {
+
+// }
   
