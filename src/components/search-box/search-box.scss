@@ -35,8 +35,27 @@
 
 @media (max-width: 768px) {
     .input-box{
-        display: none;
+      
+        .search-box {
+            width: 100px;
+            line-height: 20px;
+            margin: 13px 0 0 6px;
+            height: 20px;
+            padding: 4px 6px;
+            border-radius: 10px;
+        }
+        
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #ffffffe3;
+            opacity: 0.8;
+            font-size: 5px;
+        }
+
+        .icon{
+            display: none;
+        }
     }
+
   
   }
 
