@@ -1,0 +1,43 @@
+.movie-card-container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 15%;
+    text-decoration: none;
+    color: #111827;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 0px;
+    text-align: left;
+
+  
+    img {
+      width: 80%;
+      height: 95%;
+      object-fit: cover;
+      margin-bottom: 5px;
+    }
+  
+    .footer {
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      font-size: 18px;
+  
+      .title {
+        width: 70%;
+        margin-bottom: 15px;
+      }
+  
+      .release-date {
+        width: 30%;
+      }
+    }
+
+    
+  }
+  
