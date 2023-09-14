@@ -85,6 +85,32 @@
 
 @media (max-width: 768px) {
   .movie-card-container {
+
+    button {
+      width: 18px;
+      height: 18.21px;
+      position: absolute;
+      top: 5px;
+      right: 18px;
+      border-radius: 50%;
+      // display: none;
+
+      img{
+        width: 15px;
+        height: auto;
+        margin-top: 2px;
+      }
+
+
+    &:hover {
+      background: rgba(203, 22, 67, 0.7);
+      img {
+        opacity: 0.8;
+        background: rgba(203, 22, 67, 0.7);
+      }
+
+    }
+  }
   
     .footer {
       font-size: 5px;

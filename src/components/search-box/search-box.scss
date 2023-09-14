@@ -14,8 +14,8 @@
 
 }
 
-.search-box :focus{
-    border: 2px solid #fff;
+.search-box:focus{
+    outline: none;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
