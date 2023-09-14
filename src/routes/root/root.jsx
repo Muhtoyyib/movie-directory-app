@@ -7,7 +7,8 @@ import './root.scss';
 import Brand from '../../assets/tv.png';
 import Hamburger from '../../assets/Menu.png';
 import Rating from '../../assets/Rating.png';
-import Play from '../../assets/Icon.png'
+import Play from '../../assets/play.png'
+import Icon from '../../assets/Icon.png'
 import { useLoaderData } from 'react-router-dom';
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -19,6 +20,7 @@ export async function loader(){
 
 export default function Root() {
   const { movies } = useLoaderData()
+  console.log(movies);
   const [searchField, setSearchField] = useState('');
   movies.sort((a, b) => {
     if (a.popularity < b.popularity) return -1;
@@ -26,6 +28,8 @@ export default function Root() {
     return 0;
   });
   const [filteredMovies, setFilteredMovies] = useState([]);
+  const randomNum = Math.floor(Math.random() * 20)
+  const {poster_path, title, overview} = movies[randomNum];
 
 
   const onSearchChange = (event) => {
@@ -43,7 +47,7 @@ export default function Root() {
 
   return (
     <>
-    <div className="jumbotron" style={{backgroundImage: `url(${`https://image.tmdb.org/t/p/original${movies[3].poster_path}`})`}}>
+    <div className="jumbotron" style={{backgroundImage: `url(${`https://image.tmdb.org/t/p/original${poster_path}`})`}}>
       <div className="jumbotron-child">
         <div className='navbar'>
             <ul>
@@ -65,7 +69,7 @@ export default function Root() {
 
         <div className='featured-text'>
           <h1> 
-            {movies[3].title}
+            {title}
           </h1>
 
           <div className='rating'>
@@ -73,7 +77,7 @@ export default function Root() {
           </div>
 
           <p>
-            {movies[3]['overview']}
+            {overview}
           </p>
         </div>
 
@@ -85,7 +89,10 @@ export default function Root() {
      <div className='featured-movies'>
         <div className='directory'>
           <h2>Featured Movie</h2>
-          <a href='#' target='_blank'> See More <i className="fa fa-solid fa-greater-than icon" style={{color: 'red'}}></i></a>
+          <a href='movies' className='search-link'>
+            <p> See More</p>
+            <img src={Icon} alt='icon' className='search-icon'/>
+          </a>
         </div>
      </div> {/* featured-movies-end */}
 
@@ -97,6 +104,34 @@ export default function Root() {
         )
       })
      }
+     </div>
+
+     <div className='root-footer'>
+        <div className='socials'>
+          <a href='https://web.facebook.com/akande.olalekan.1238/' target='_blank' rel="noreferrer"> 
+           <i className="fa fa-facebook"></i>
+          </a>
+
+          <a href='https://www.instagram.com/devtoheeb/?hl=en' target='_blank' rel="noreferrer">
+           <i className="fa fa-instagram footer-icon"></i> 
+          </a>
+
+          <a href='https://twitter.com/devtoheeb' target='_blank' rel="noreferrer"> 
+            <i className="fa fa-twitter footer-icon"></i>
+          </a>
+
+          <a href='https://www.youtube.com/channel/UCqalVAdpi_Dx3IfXO5Kl6jQ' target='_blank' rel="noreferrer"> 
+            <i className="fa fa-youtube footer-icon"></i>
+          </a> 
+        </div>
+
+        <div className='footer-sig'>
+         <a href='#'> Conditions of Use</a>
+         <a href='#'> Privacy & Policy</a>
+         <a href='#'> Press Room</a>
+        </div>
+
+        <p>© 2021 MovieBox by Adriana Eka Prayudha  </p>
      </div>
     </>
   )
