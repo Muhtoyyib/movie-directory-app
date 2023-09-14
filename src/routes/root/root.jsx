@@ -131,7 +131,7 @@ export default function Root() {
          <a href='#'> Press Room</a>
         </div>
 
-        <p>© 2021 MovieBox by Adriana Eka Prayudha  </p>
+        <p>© 2023 MovieBox Replica by Akande Olalekan Toheeb  </p>
      </div>
     </>
   )
