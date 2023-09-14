@@ -1,5 +1,6 @@
 import { getMoviebyId } from "../../components/helper";
 import { useLoaderData } from "react-router-dom";
+import VerticalNav from "../../components/vertical-nav/vertical-nav";
 
 import './movie-detail.scss'
   
@@ -25,16 +26,21 @@ export default function MovieDetails (){
 
 
     return(
+      <div className="display-movieDetails-container">
+        <VerticalNav />
+
         <div className="movie-detail-container">
-         <img src={`https://image.tmdb.org/t/p/original${backdrop_path}`} alt="movie_poster" />
+        <img src={`https://image.tmdb.org/t/p/original${backdrop_path}`} alt="movie_poster" />
 
-         <div className="movie-details">
-            <p className="title" data-testid='movie-title'>{title}</p>
-            <p className="release-date" data-testid='movie-release-date'>{utcDateString}</p>
-         </div>
-
-         <p className="overwiew" data-testid='movie-overview'>{overview}</p>
+        <div className="movie-details">
+          <p className="title" data-testid='movie-title'>{title}</p>
+          <p className="release-date" data-testid='movie-release-date'>{utcDateString}</p>
         </div>
+
+        <p className="overwiew" data-testid='movie-overview'>{overview}</p>
+      </div>
+      </div>
+
     )
 }
 
