@@ -1,73 +1,102 @@
+.display-movieDetails-container{
+    display: flex;
+    align-content: space-between;
 .movie-detail-container{
     font-family: Poppins;
-    width: 80%;
+    width: 70%;
     margin: auto;
-    margin-top: 3%;
-}
-
-img{
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
-}
-
-.movie-details{
-    display: flex;
-    width: 60%;
-
-
-    .title{
-        width: 70%;
-        text-align: left;
-        font-size: 23px;
-        font-weight: 700;
-        line-height: 35px;
-        letter-spacing: 0em;
-    }
-
-    .release-date{
-        width: 30%;
-        text-align: right;
-        font-size: 23px;
-        font-weight: 400;
-        line-height: 30px;
-        letter-spacing: 0em;
-    
-    }
-}
-
-.overwiew{
-    width: 60%;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 30px;
-    letter-spacing: 0em;
-    text-align: left;
     margin-top: 5px;
 
-}
+    img{
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+    }
 
-@media (max-width: 768px) {
-    
     .movie-details{
         display: flex;
         width: 60%;
     
     
         .title{
-            font-size: 10px;
-            line-height: 15px;
+            width: 70%;
+            text-align: left;
+            font-size: 23px;
+            font-weight: 700;
+            line-height: 35px;
+            letter-spacing: 0em;
         }
     
         .release-date{
-            font-size: 10px;
-            line-height: 10px;
+            width: 30%;
+            text-align: right;
+            font-size: 23px;
+            font-weight: 400;
+            line-height: 30px;
+            letter-spacing: 0em;
+        
         }
     }
     
     .overwiew{
-        font-size: 10px;
-        line-height: 10px;
+        width: 60%;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-top: 5px;
+    
+    }
+}
+
+
+
+
+}
+
+@media (max-width: 768px) {
+    
+    .display-movieDetails-container{
+
+    .movie-detail-container{
+        width: 80%;
+        margin-top: 10px;
+    
+        img{
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+    
+        .movie-details{
+            display: flex;
+            width: 100%;
+        
+        
+            .title{
+                font-size: 18px;
+                line-height: 20px;
+            }
+        
+            .release-date{
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+        
+        .overwiew{
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 20px;
+            margin-top: 8px;
+        
+        }
+    }
+    
+    
+    
+    
     }
 }
 

@@ -7,10 +7,24 @@ import Heart from '../../assets/Heart.png'
 export default function CardComponent ({movie}){
     // eslint-disable-next-line react/prop-types
     const { title, poster_path, release_date, id} = movie;
+    const currentPath = window.location.pathname;
+    let link = '';
+
+    console.log(currentPath);
+
+    if (currentPath === '/movies') { 
+        link = `${id}`;
+    } else if (currentPath === '/') {
+        link = `movies/${id}`
+    } 
+
 
     return(
         <div data-testid='movie-card'>
-            <Link to={`movies/${id}`} className='movie-card-container' >
+        {
+
+        }
+            <Link to={link} className='movie-card-container' >
                 <img src={`https://image.tmdb.org/t/p/original${poster_path}`} alt={`${title}`} data-testid = 'movie-poster'/>
 
                 <div className='footer'>
