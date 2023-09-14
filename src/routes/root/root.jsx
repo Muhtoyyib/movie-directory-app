@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import CardComponent from '../../components/card-component/card-component';
 import SearchBox from '../../components/search-box/search-box';
 import { getMovies } from '../../components/helper';
@@ -89,10 +90,10 @@ export default function Root() {
      <div className='featured-movies'>
         <div className='directory'>
           <h2>Featured Movie</h2>
-          <a href='movies' className='search-link'>
+          <Link to='movies' className='search-link'>
             <p> See More</p>
             <img src={Icon} alt='icon' className='search-icon'/>
-          </a>
+          </Link>
         </div>
      </div> {/* featured-movies-end */}
 
