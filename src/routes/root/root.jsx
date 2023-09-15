@@ -44,7 +44,7 @@ export default function Root() {
     return 0;
   });
   const [filteredMovies, setFilteredMovies] = useState([]);
-  const randomNum = Math.floor(Math.random() * 7)
+  const randomNum = Math.floor(Math.random() * 5)
   const {poster_path, title, overview} = usableMovies[randomNum];
 
 
