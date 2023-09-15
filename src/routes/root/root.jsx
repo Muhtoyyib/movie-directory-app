@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import CardComponent from '../../components/card-component/card-component';
 import SearchBox from '../../components/search-box/search-box';
-import { getMovies } from '../../components/helper';
+import { getMovies, getMovieWithID} from '../../components/helper';
 
 import './root.scss';
 import Brand from '../../assets/tv.png';
@@ -14,23 +14,40 @@ import { useLoaderData } from 'react-router-dom';
 
 // eslint-disable-next-line react-refresh/only-export-components
 export async function loader(){
-  let movies = await getMovies();
+  let results = await getMovies();
+  let movies = []
+  if(results){
+    const movieDetailsPromises = results.map(
+      async (movie)=>{
+        const movieDetails = await getMovieWithID(movie.id);
 
-  return { movies }
+        return { movieDetails}
+      }
+    )
+
+    movies = await Promise.all(movieDetailsPromises);
+  }
+
+
+  const usableMovies = movies.map((movies) => movies.movieDetails);
+
+  return { usableMovies }
 }
 
 export default function Root() {
-  const { movies } = useLoaderData()
-  console.log(movies);
+  const { usableMovies } = useLoaderData()
+
+  console.log(usableMovies);
+  
   const [searchField, setSearchField] = useState('');
-  movies.sort((a, b) => {
+  usableMovies.sort((a, b) => {
     if (a.popularity < b.popularity) return -1;
     if (a.popularity > b.popularity) return 1;
     return 0;
   });
   const [filteredMovies, setFilteredMovies] = useState([]);
   const randomNum = Math.floor(Math.random() * 20)
-  const {poster_path, title, overview} = movies[randomNum];
+  const {poster_path, title, overview} = usableMovies[randomNum];
 
 
   const onSearchChange = (event) => {
@@ -39,12 +56,12 @@ export default function Root() {
   };
 
   useEffect(()=>{
-    const newFilteredMovies = movies.filter((movie) => {
+    const newFilteredMovies = usableMovies.filter((movie) => {
       return movie.title.toLowerCase().includes(searchField);
      })
 
      setFilteredMovies(newFilteredMovies)
-  },[movies, searchField])
+  },[usableMovies, searchField])
 
   return (
     <>

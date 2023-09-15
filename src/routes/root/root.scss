@@ -272,15 +272,15 @@
             padding-top: 40px;
       
             h1 {
-              font-size: 3.5vw;
-              line-height: 3.5vw;
+              font-size: 4.5vw;
+              line-height: 4.5vw;
             }
       
             .rating {
               display: flex;
               justify-content: space-between;
-              width: 60%;
-              margin-top: 2%;
+              width: 80%;
+              margin-top: 5%;
 
               .tomato{
                 margin-left: 15px;
@@ -289,10 +289,10 @@
 
       
             p {
-              padding-top: 15px;
-              font-size: 5px;
+              padding-top: 10px;
+              font-size: 2vw;
               font-weight: 500;
-              line-height: 8px;
+              line-height: 2.5vw;
             
             }
           }
@@ -318,14 +318,16 @@
   }
 
   .featured-movies {
+    margin-bottom: -10px;
   
     .directory {
       h2 {
-        font-size: 2.6vw;
+        font-size: 3.5vw;
+        padding-top: 2px;
       }
   
       .search-link{
-        font-size: 1.3vw;
+        font-size: 2.5vw;
 
         margin-left: -10px;
 
@@ -333,7 +335,7 @@
             width: 6px;
             height: 8px;
             position: absolute;
-            top: 409px;
+            top: 412px;
             right: 38px;
             opacity: 1.2;
         }
@@ -343,7 +345,7 @@
 
   .products-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     row-gap: 20px;
   }
 
