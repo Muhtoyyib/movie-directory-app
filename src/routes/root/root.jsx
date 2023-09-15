@@ -1,12 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import CardComponent from '../../components/card-component/card-component';
-import SearchBox from '../../components/search-box/search-box';
+import Navbar from '../../components/navbar/navbar';
 import { getMovies, getMovieWithID} from '../../components/helper';
 
 import './root.scss';
-import Brand from '../../assets/tv.png';
-import Hamburger from '../../assets/Menu.png';
 import Rating from '../../assets/Rating.png';
 import Play from '../../assets/play.png'
 import Icon from '../../assets/Icon.png'
@@ -46,7 +44,7 @@ export default function Root() {
     return 0;
   });
   const [filteredMovies, setFilteredMovies] = useState([]);
-  const randomNum = Math.floor(Math.random() * 20)
+  const randomNum = Math.floor(Math.random() * 10)
   const {poster_path, title, overview} = usableMovies[randomNum];
 
 
@@ -67,23 +65,7 @@ export default function Root() {
     <>
     <div className="jumbotron" style={{backgroundImage: `url(${`https://image.tmdb.org/t/p/original${poster_path}`})`}}>
       <div className="jumbotron-child">
-        <div className='navbar'>
-            <ul>
-              <li className='brand'>
-                <img src={Brand} alt='brand' />
-                <h1> MovieBox</h1>
-              </li>
-
-              <li> 
-                <SearchBox onSearchChange={onSearchChange} placeholder='What do you want to watch?' />
-              </li>
-
-              <li className='sign-in'>
-                <h1> <a href='#'> Sign In</a></h1>
-                <img src={Hamburger} alt='Hamburger' />
-              </li>
-            </ul>
-        </div> {/* Navbar end */}
+        <Navbar onSearchChange={onSearchChange} />
 
         <div className='featured-text'>
           <h1> 

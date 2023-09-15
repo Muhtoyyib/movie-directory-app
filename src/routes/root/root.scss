@@ -230,7 +230,7 @@
   
 @media (max-width: 768px) {
     .jumbotron {
-        min-height: 400px;
+        min-height: 520px;
         .jumbotron-child {
           ul {
             display: flex;
@@ -247,7 +247,7 @@
                     margin-top: 7px;
                 }
               h1 {
-                padding: 12px 0 0 8px;
+                padding: 10px 0 0 8px;
                 font-size: 10px;
               }
             }
@@ -256,12 +256,12 @@
       
               h1 {
                 font-size: 8px;
-                padding: 5px 10px 0 0;
+                padding: 7px 10px 0 0;
               }
     
       
               img {
-                margin: 7px 0 0 3px;
+                margin: 9px 0 0 3px;
                 width: 20px;
                 height: 20px;
               }
@@ -272,7 +272,7 @@
             padding-top: 40px;
       
             h1 {
-              font-size: 4.5vw;
+              font-size: 4.7vw;
               line-height: 4.5vw;
             }
       
@@ -290,9 +290,9 @@
       
             p {
               padding-top: 10px;
-              font-size: 2vw;
+              font-size: 2.6vw;
               font-weight: 500;
-              line-height: 2.5vw;
+              line-height: 2.4vw;
             
             }
           }
@@ -318,25 +318,26 @@
   }
 
   .featured-movies {
-    margin-bottom: -10px;
+    margin-top: 6%;
+    margin-bottom: -17px;
   
     .directory {
       h2 {
-        font-size: 3.5vw;
+        font-size: 4.5vw;
         padding-top: 2px;
       }
   
       .search-link{
-        font-size: 2.5vw;
-
-        margin-left: -10px;
+        font-size: 3vw;
+        margin-left: -16px;
+        margin-top: 1px;
 
         .search-icon{
             width: 6px;
             height: 8px;
             position: absolute;
-            top: 412px;
-            right: 38px;
+            top: 545px;
+            right: 43px;
             opacity: 1.2;
         }
       }
