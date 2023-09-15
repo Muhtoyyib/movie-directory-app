@@ -1,4 +1,4 @@
-import { getMoviebyId } from "../../components/helper";
+import { getMovieWithID } from "../../components/helper";
 import { useLoaderData } from "react-router-dom";
 import VerticalNav from "../../components/vertical-nav/vertical-nav";
 
@@ -6,7 +6,7 @@ import './movie-detail.scss'
   
   // eslint-disable-next-line react-refresh/only-export-components
   export async function loader({ params }) {
-    let movie = await getMoviebyId(Number(params.movieId));
+    let movie = await getMovieWithID(Number(params.movieId));
 
     return { movie }
   }
@@ -16,7 +16,7 @@ export default function MovieDetails (){
     const { movie } = useLoaderData();
 
     console.log(movie);
-    const {title , backdrop_path, release_date, overview } = movie
+    const {title , backdrop_path, release_date, overview , runtime } = movie
 
     const localDateStr = release_date;
     const localDate = new Date(localDateStr);
@@ -35,6 +35,7 @@ export default function MovieDetails (){
         <div className="movie-details">
           <p className="title" data-testid='movie-title'>{title}</p>
           <p className="release-date" data-testid='movie-release-date'>{utcDateString}</p>
+          <p className="movie-runtime" data-testid="movie-runtime">{runtime}</p>
         </div>
 
         <p className="overwiew" data-testid='movie-overview'>{overview}</p>
