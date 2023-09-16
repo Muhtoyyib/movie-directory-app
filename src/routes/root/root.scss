@@ -227,35 +227,9 @@
         padding-bottom: 20px;
     }
   }
-  @media only screen and (min-width: 600px) {
-    .featured-movies {
-        margin-top: 6%;
-        margin-bottom: -17px;
-      
-        .directory {
-          h2 {
-            font-size: 4.5vw;
-            padding-top: 2px;
-          }
-      
-          .search-link{
-            font-size: 3vw;
-            margin-left: -16px;
-    
-            .search-icon{
-                width: 7px;
-                height: 9px;
-                position: absolute;
-                top: 548px;
-                right: 48px;
-                opacity: 1.2;
-            }
-          }
-        }
-      }
-}
+
   
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 768px){
     .jumbotron {
         min-height: 550px;
         .jumbotron-child {
