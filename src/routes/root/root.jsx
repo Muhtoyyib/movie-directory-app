@@ -98,7 +98,7 @@ export default function Root() {
 
      <div className='products-container'>
      {
-      filteredMovies.slice(0,10).map((movie) => {
+      filteredMovies.slice(0,12).map((movie) => {
         return(
           <CardComponent key={movie.id} movie={movie} />
         )
